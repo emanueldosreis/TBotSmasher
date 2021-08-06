@@ -4,6 +4,7 @@ from telethon.sync import TelegramClient, events
 import argparse
 import os
 
+
 parser = argparse.ArgumentParser()
 
 parser.add_argument("-p", "--payload", help = "String to be sent to the bot or channel")
@@ -11,6 +12,7 @@ parser.add_argument("-b", "--bot", help = " target @bot")
 parser.add_argument("-c", "--command", help = " command to be sent to target @bot")
 parser.add_argument("-t", "--timeout", help = " time to listen before send close the connection")
 
+args = parser.parse_args()
 
 if not (args.payload):
     print("Please specify the payload using -p ")
